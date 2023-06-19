@@ -1,4 +1,5 @@
 import 'package:e_commerce_ui/constant.dart';
+import 'package:e_commerce_ui/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
         ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: WelComeScreen(),
+      initialRoute: WelComeScreen.routeName,
+      routes: routes,
     );
   }
 }

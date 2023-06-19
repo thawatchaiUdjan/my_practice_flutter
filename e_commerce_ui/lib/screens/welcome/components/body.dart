@@ -1,3 +1,4 @@
+import 'package:e_commerce_ui/components/defaul_button.dart';
 import 'package:e_commerce_ui/constant.dart';
 import 'package:e_commerce_ui/screens/welcome/components/welcome_content.dart';
 import 'package:e_commerce_ui/size_config.dart';
@@ -43,6 +44,7 @@ class _BodyState extends State<Body> {
                   text: welcomeData[index]["text"].toString(),
                   image: welcomeData[index]["image"].toString(),
                 ),
+                scrollBehavior: ScrollBehavior().copyWith(overscroll: false),
                 onPageChanged: (value) => setState(() {
                   currPage = value;
                 }),
@@ -50,16 +52,26 @@ class _BodyState extends State<Body> {
             ),
             Expanded(
               flex: 2,
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: List.generate(
-                      welcomeData.length,
-                      (index) => buildDotSlide(index),
+              child: Padding(
+                padding:
+                    EdgeInsets.symmetric(horizontal: getProporScreenWidth(20)),
+                child: Column(
+                  children: [
+                    SizedBox(height: 25),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: List.generate(
+                        welcomeData.length,
+                        (index) => buildDotSlide(index),
+                      ),
                     ),
-                  ),
-                ],
+                    Spacer(
+                      flex: 4,
+                    ),
+                    DefaulButton(textBtn: "CONTINUE", onPress: () {}),
+                    Spacer(),
+                  ],
+                ),
               ),
             ),
           ],
