@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class SizeConfig {
   static late MediaQueryData _mediaQueryData;

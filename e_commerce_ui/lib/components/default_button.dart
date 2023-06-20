@@ -34,7 +34,7 @@ class DefaulButton extends StatelessWidget {
             letterSpacing: 1,
           ),
         ),
-        onPressed: onPress(),
+        onPressed: () => onPress(),
       ),
     );
   }

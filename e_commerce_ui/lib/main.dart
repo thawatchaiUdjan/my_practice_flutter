@@ -1,8 +1,8 @@
 import 'package:e_commerce_ui/constant.dart';
 import 'package:e_commerce_ui/routes.dart';
+import 'package:e_commerce_ui/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'screens/welcome/welcome_screen.dart';
 
 void main() {
@@ -16,15 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
-        fontFamily: GoogleFonts.muli().fontFamily,
-        textTheme: TextTheme(
-          bodyText1: TextStyle(color: kTextColor),
-          bodyText2: TextStyle(color: kTextColor),
-        ),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      theme: theme(),
       initialRoute: WelComeScreen.routeName,
       routes: routes,
     );
